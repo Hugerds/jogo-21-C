@@ -40,18 +40,14 @@ void game() {
 	system("color F0");
 	int carta[20], cartaB[20], n, somaC=0, somaCB=0;
 	char opcao;
-	
 	printf(">------------------>> ~BLACKJACK~ <<------------------<");
 	printf("\n");
-	
 	printf("\n");
-	
 	srand( (unsigned)time(NULL) );
 	carta[1]=1 + ( rand() % 10 );
 	carta[2]=1 + ( rand() % 10 );
 	somaC=carta[1]+carta[2];
 	printf("Carta 1: %d.\nCarta 2: %d.\n\nSoma parcial: %d.\n\n",carta[1], carta[2], somaC);
-	
 	for(n=3; n<22; n++) {
 		fflush(stdin);
 		fflush(stdout);
@@ -155,11 +151,7 @@ void menuPrincipal() {
         gotoxy(20,8);  printf("REGRAS");
         gotoxy(20,9);  printf("SAIR");
         setlocale(LC_ALL, "C");
-
-
-
         system("pause>nul");
-
         if(GetAsyncKeyState(VK_DOWN) && y != 9) {
             gotoxy(18,y); printf("  ");
             y++;
@@ -167,7 +159,6 @@ void menuPrincipal() {
             opcao++;
             continue;
         }
-
         if(GetAsyncKeyState(VK_UP) && y != 7){
             gotoxy(18,y); printf("  ");
             y--;
@@ -175,7 +166,6 @@ void menuPrincipal() {
             opcao--;
             continue;
         }
-
         if(GetAsyncKeyState(VK_RETURN)){
             if (opcao == 1) {
                 carregamento();
