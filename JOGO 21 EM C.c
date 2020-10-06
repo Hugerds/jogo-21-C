@@ -10,11 +10,8 @@
 
 
 void gotoxy(int x,int y) {
-    // x máximo = 120
-    //y máximo = 30
     HANDLE hCon;
     COORD dwPos;
-
     dwPos.X = x-1;
     dwPos.Y = y-1;
     hCon = GetStdHandle(STD_OUTPUT_HANDLE);
