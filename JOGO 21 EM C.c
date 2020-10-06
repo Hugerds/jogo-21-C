@@ -30,7 +30,7 @@ void rules() {
 }
 
 void pause (float delay1) {
-   if (delay1<0.001) return; // pode ser ajustado e/ou evita-se valores negativos. //
+   if (delay1<0.001) return;
    float inst1=0, inst2=0;
    inst1 = (float)clock()/(float)CLOCKS_PER_SEC;
    while (inst2-inst1<delay1) inst2 = (float)clock()/(float)CLOCKS_PER_SEC;
@@ -55,7 +55,7 @@ void game() {
 	somaC=carta[1]+carta[2];
 	printf("Carta 1: %d.\nCarta 2: %d.\n\nSoma parcial: %d.\n\n",carta[1], carta[2], somaC);
 	
-	for(n=3; n<22; n++) { // Turno do jogador //
+	for(n=3; n<22; n++) {
 		fflush(stdin);
 		fflush(stdout);
 		printf("Deseja comprar mais uma carta? (s/n)\n\n");
